@@ -5,14 +5,14 @@
 .background{
     width: 1024px;
     height: 600px;
-    background-image: url("../images/background.png");
+    background-image: url("background.png");
 
     padding: 20px 0px 0px 20px; /*위부터 시계방향*/
 }
 .outerbox{
     width: 808px;
     height: 540px;
-    background-image: url("../images/outerbox.png");
+    background-image: url("outerbox.png");
     
     padding: 19px 0px 0px 19px;
 }

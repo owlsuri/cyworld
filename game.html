@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./styles/game.css">
+    <script>
+        function startWord(){
+            const word = document.getElementById("word").innerText;
+            const lastword = word[word.length-1]
+
+            const myword = document.getElementById("myword").value;
+            const firstword = myword[0]
+
+            if(lastword === firstword){
+                document.getElementById('result').innerText = "정답입니다!"
+                document.getElementById('word').innerText = myword;
+                document.getElementById('myword').value = "" 
+                // 빈 문자열 입력해서 인풋태그 안쪽 비워줌
+            } else{
+                document.getElementById('result').innerText = "땡!"
+                document.getElementById('myword').value = "" 
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__header">
+            <div class="header__title">
+                <div class="title">GAME</div>
+                <div class="subtitle">TODAY CHOICE</div>
+            </div>
+            <div class="devideLine"></div>
+        </div>
+        <div class="game__container">
+            <img src="./images/word.png">
+            <div class="game__title">끝말잇기</div>
+            <div class="preword">
+                <div class="preword">제시어 : </div> 
+                <div class="preword" id="word">뉴비즈코드</div>
+            </div>
+            <div class="game__subtitle"></div>
+            <div class="word__text">
+                <input id="myword" class="textbox" type="text" placeholder="단어를 입력하세요">
+                <button class="search" onclick="startWord()">입력</button>
+            </div>
+            <div id="result" class="word__result">결과!</div>
+        </div>
+        <div class="game__container">
+            <img src="./images/lotto.png">
+            <div class="game__title">LOTTO</div>
+            <div class="preword">버튼을 누르세요.</div>
+            <div class="lottoBox">
+                <span class="lottoNum">3</span>
+                <span class="lottoNum">5</span>
+                <span class="lottoNum">10</span>
+                <span class="lottoNum">24</span>
+                <span class="lottoNum">30</span>
+                <span class="lottoNum">34</span>
+            </div>
+            <button class="lottoBtn" onclick="">Button</button>
+            <div class="game__subtitle"></div>
+        </div>
+    </div>
+</body>
+</html>

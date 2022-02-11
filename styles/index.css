@@ -64,7 +64,7 @@
 
 .left__body__header__line{
     border-bottom: 1px dashed #999999;
-    margin: 15px 0 15px 0;
+    margin: 15px 0 5px 0;
     width: 148px;
 }
 .left__body__profile{
@@ -73,7 +73,6 @@
     margin-bottom: 50px;
 }
 .left__body__profile i{
-    margin-bottom: 10px;
     font-size: 9px;
 }
 #idx{
@@ -133,7 +132,9 @@ select, option{
     font-weight: bold;
     color: #55B2E4;
 }
-
+.right__header__title{
+    font-size: 16px;
+}
 .right__header__setting{
     font-size: 9px;
 }
